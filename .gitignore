@@ -1,0 +1,5 @@
+*.png
+/media_cdn/*
+/static_cdn/*
+**/__pycache__/
+venv/

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %} Abhedya - leaderboard {% endblock %}
+
+{% block content %}
+<div class="col-md-12">
+  {% if active %}
+  <center>
+    <div style="color: #16e16e;font-size: 4vh;">
+      HUNT IS ACTIVE
+    </div>
+  </center>
+  <h2 class="standings-head" style="color: #16e16e;">Standings</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr style="color: #aaa">
+        <th>Rank</th>
+        <th>Username</th>
+        <th>Level</th>
+      </tr>
+    </thead>
+{% for user in queryset %}
+
+    <tbody>
+      <tr style="background-color: #101010; color: #efefef;">
+        <td>{{forloop.counter}}</td>
+        <td data-toggle="tooltip" title="{{user.profile.get_name}}"><span>{{user.username}}</span></td>
+        <td>{{user.profile.get_level}}</td>
+      </tr>
+  </tbody>
+
+{%endfor%}
+  </table>
+  {% else %}
+    <div style="color: #16e16e;font-size: 4vh;">
+      Leader board will be active once the hunt starts!
+    </div>
+  {% endif %}
+</div>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+
+
+{% endblock %}

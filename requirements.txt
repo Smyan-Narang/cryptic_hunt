@@ -1,0 +1,17 @@
+asgiref
+astroid
+dj-database-url
+Django
+django-crispy-forms
+gunicorn
+isort
+lazy-object-proxy
+mccabe
+olefile
+Pillow
+pylint
+pytz
+six
+sqlparse
+toml
+wrapt
