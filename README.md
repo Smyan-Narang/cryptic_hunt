@@ -1,9 +1,6 @@
 # cryptic_hunt
 SHISTECH's Cryptic Hunt Code
 
-# Cryptic Hunt
-Cryptic Hunt for Prody - 2021
-
 ## Requirements
 Python3+ , Django 1.11.17+
 
