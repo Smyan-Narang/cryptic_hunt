@@ -49,6 +49,7 @@ def leaderboard(request):
 	"""
 	Returns the leadboard, sorted first with level (desc) then time (asc)
 	"""
+	
 	active = show_leaderboard()
 
 	queryset = User.objects.order_by('-profile__current_level','profile__current_level_time').exclude(is_staff=True)
