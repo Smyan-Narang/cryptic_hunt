@@ -12,7 +12,6 @@ class SignUpForm(UserCreationForm):
 	"""
 	# Insitute Name
 	institute = forms.CharField(max_length=255)
-	phoneNumber = forms.IntegerField(required=True)
 
 	def __init__(self, *args, **kwargs):
 		super(SignUpForm, self).__init__(*args, **kwargs)
@@ -23,7 +22,7 @@ class SignUpForm(UserCreationForm):
 	class Meta:
 		model = User
 		# The fields shown in the form
-		fields = ('first_name', 'last_name', 'username', 'email', 'phoneNumber', 'password1', 'password2', 'institute' )
+		fields = ('first_name', 'last_name', 'username', 'email', 'password1', 'password2', 'institute' )
 
 	def clean_email(self):
 		email = self.cleaned_data.get('email')
@@ -34,15 +33,6 @@ class SignUpForm(UserCreationForm):
 			return email
 		return email
 
-	def clean_phoneNumber(self):
-		phoneNumber = self.cleaned_data.get('phoneNumber')
-		try:
-			match = User.objects.get(profile__phoneNumber = phoneNumber)
-			raise forms.ValidationError('This phone number is already in use.')
-		except User.DoesNotExist:
-			return phoneNumber
-		return phoneNumber
-	
 	def clean_username(self):
 		uname = self.cleaned_data.get('username')
 		if uname in ["admin", "root"]:
