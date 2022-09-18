@@ -2,6 +2,11 @@
 {% block title %} KRYPTOS - register {% endblock %}
 {% block content %}
 {% load crispy_forms_tags %}
+
+<ul class ="nav nav-tabs">
+	<li role="presentation"><a href="/login/">Login</a></li>
+	<li role="presentation" class="active"><a href="/register/">Register</a></li>
+</ul>
 <h2>Register</h2>
 <hr>
 	<form method="POST" action=""> {% csrf_token %}
