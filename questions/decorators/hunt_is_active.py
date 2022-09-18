@@ -6,6 +6,7 @@ from questions.lib.actions import is_active_period, local_publish_date, local_de
 def hunt_is_active(function):
     def wrap(request, *args, **kwargs):
         cur_user = request.user
+        
         active = is_active_period()
 
         if cur_user.is_staff:
