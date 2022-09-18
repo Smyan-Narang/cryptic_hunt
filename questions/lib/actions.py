@@ -1,8 +1,8 @@
 from datetime import datetime
 import pytz
 
-PUBLISH_DATE = datetime(year=2021, month=2, day=11, hour=0, minute=0, second=0)
-DEACTIVATE_DATE = datetime(year=2021, month=2, day=11, hour=23, minute=59, second=59)
+PUBLISH_DATE = datetime(year=2022, month=9, day=18, hour=0, minute=0, second=0)
+DEACTIVATE_DATE = datetime(year=2022, month=10, day=3, hour=0, minute=0, second=0)
 tz = pytz.timezone('Asia/Kolkata')
 local_publish_date = tz.localize(PUBLISH_DATE)
 local_deactivate_date = tz.localize(DEACTIVATE_DATE)
