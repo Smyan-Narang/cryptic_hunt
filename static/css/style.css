@@ -181,17 +181,6 @@ header.header h1 {
   font-weight: 900;
 }
 
-.glitch-window {
-  position: absolute;
-  top: 0;
-  left: -2px;
-  width: 100%;
-  color: white;
-  text-shadow: 2px 0 black, -1px 0 yellow, -3px 0 rgb(1, 177, 1);
-  overflow: hidden;
-  animation: crt-me 2500ms infinite linear alternate-reverse;
-}
-
 @-webkit-keyframes crt-me {
   0% {
     clip: rect(31px, 9999px, 94px, 0);
@@ -436,15 +425,6 @@ form {
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
-body{
-	font-family: 'Poppins', sans-serif;
-	font-weight: 300;
-	font-size: 15px;
-	line-height: 1.7;
-	color: #c4c3ca;
-	background-color: #1f2029;
-	overflow-x: hidden;
-}
 a {
 	cursor: pointer;
   transition: all 200ms linear;
@@ -544,7 +524,7 @@ h6 span{
 .card-front, .card-back {
   width: 100%;
   height: 100%;
-  background-color: #2a2b38;
+
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
   background-position: bottom center;
   background-repeat: no-repeat;
