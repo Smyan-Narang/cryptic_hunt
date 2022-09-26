@@ -1,2 +1,2 @@
-web: gunicorn cryptic.wsgi --log-file -
+web: gunicorn --worker-tmp-dir /dev/shm cryptic.wsgi
 
