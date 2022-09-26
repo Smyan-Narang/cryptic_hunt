@@ -31,6 +31,7 @@ SECRET_KEY = 'w+3&$np343yh@7de01l+k@sxj)n%r@%(l_=w%kn=g39+)#u#^4'
 DEBUG = True
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS","127.0.0.2,localhost").split(",")
+ALLOWED_HOSTS.append("www.kryptos.shis.tech")
 
 
 # Application definition
