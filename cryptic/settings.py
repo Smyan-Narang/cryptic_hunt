@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 from pathlib import Path
 
+
+from .cdn.conf import *
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -46,6 +49,7 @@ INSTALLED_APPS = [
 
     # third party
     'crispy_forms',
+    'storages'
 
     # my apps
     'questions',
@@ -146,12 +150,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "accounts/static")
-
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
-
+STATIC_ROOT = BASE_DIR / "staticfiles-cdn" # dev example
 # STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_cdn")
 
 MEDIA_URL = "/media/"
