@@ -28,7 +28,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w+3&$np343yh@7de01l+k@sxj)n%r@%(l_=w%kn=g39+)#u#^4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS","127.0.0.2,localhost").split(",")
 ALLOWED_HOSTS.append("www.kryptos.shis.tech")
